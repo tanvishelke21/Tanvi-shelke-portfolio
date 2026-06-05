@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- P1: Mobile friendly — no zoom, fixed viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Tanvi Shelke | Data Analyst & Data Scientist</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div id="loader">
+  <div class="loader-text">INITIALIZING...</div>
+  <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+  <div style="font-family:'Share Tech Mono';font-size:.62rem;letter-spacing:3px;color:rgba(255,255,255,.22);margin-top:4px;">TANVI SHELKE PORTFOLIO v2025</div>
+</div>
+
+<div class="bg-canvas"><canvas id="bgCanvas"></canvas></div>
+<div class="grid-overlay"></div>
+<div class="particles" id="particles"></div>
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#hero">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#certifications">Certs</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<nav>
+  <div class="nav-logo">TS.DEV</div>
+  <div class="nav-links">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certs</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="content">
+
+  <!-- ════ 1. HERO — P2 ════ -->
+  <section id="hero">
+    <div class="floating-emojis">
+      <div class="emoji-float" style="top:14%;left:7%;animation-delay:0s;animation-duration:7s">📊</div>
+      <div class="emoji-float" style="top:22%;right:9%;animation-delay:1.2s;animation-duration:8s">🤖</div>
+      <div class="emoji-float" style="bottom:30%;left:10%;animation-delay:2s;animation-duration:9s">💡</div>
+      <div class="emoji-float" style="bottom:22%;right:13%;animation-delay:.6s;animation-duration:7.5s">🔬</div>
+      <div class="emoji-float" style="top:42%;left:3%;animation-delay:3s;animation-duration:10s">⚡</div>
+      <div class="emoji-float" style="top:58%;right:4%;animation-delay:1.8s;animation-duration:8.5s">🚀</div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-badge">🚀 Open to Opportunities &nbsp;|&nbsp; Fresher 2025</div>
+
+      <!-- P2: Name big, one fixed color glow -->
+      <h1 class="hero-name">TANVI SHELKE</h1>
+
+      <!-- P2: Data Scientist prominently below name in gradient -->
+      <p class="hero-title-main">Data Scientist</p>
+
+      <div class="hero-line"></div>
+
+      <!-- P2: Other roles below, smaller -->
+      <p class="hero-roles">
+        <span style="white-space:nowrap">ML Engineer</span>
+        <span class="dot-sep">·</span>
+        <span style="white-space:nowrap">Python Developer</span>
+        <span class="dot-sep">·</span>
+        <span style="white-space:nowrap">AI Builder</span>
+        <span class="dot-sep">·</span>
+        <span style="white-space:nowrap">Data Analyst</span>
+      </p>
+
+      <div class="typewriter-container"><span id="typewriter"></span></div>
+
+      <!-- P2: Buttons properly working -->
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact"  class="btn-outline">Hire Me ✨</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS — P3: count animation, Skills instead of Passion, all countable -->
+  <div class="stats-wrap">
+    <div class="stats-section reveal">
+      <div class="stat-item">
+        <div class="stat-number" data-count="6" data-suffix="+">6+</div>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="6" data-suffix="+">6+</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="1" data-suffix="">1</div>
+        <div class="stat-label">Publication</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="9" data-suffix="+">9+</div>
+        <div class="stat-label">Skills Mastered</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-sep"></div>
+
+  <!-- ════ 2. ABOUT — P4 ════ -->
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="section-tag">// who am i</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="about-grid reveal">
+
+      <!-- LEFT: Avatar + Info cards + Skills chips -->
+      <div class="about-left-col">
+        <div class="avatar-frame">
+          <div class="avatar-ring-2"></div>
+          <div class="avatar-ring"></div>
+          <div class="avatar-inner">👩‍💻</div>
+        </div>
+
+        <!-- P4: Info boxes below avatar -->
+        <div class="about-info-cards">
+          <div class="about-info-card">
+            <span class="about-info-icon">📍</span>
+            <div>
+              <div class="about-info-label">Location</div>
+              <div class="about-info-value">Pune, Maharashtra, India</div>
+            </div>
+          </div>
+          <div class="about-info-card">
+            <span class="about-info-icon">💼</span>
+            <div>
+              <div class="about-info-label">Status</div>
+              <div class="about-info-value"><span class="status-dot">●</span> Open to Opportunities</div>
+            </div>
+          </div>
+          <div class="about-info-card">
+            <span class="about-info-icon">📧</span>
+            <div>
+              <div class="about-info-label">Email</div>
+              <div class="about-info-value">tanvishelke2112@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Text + skill chips + buttons -->
+      <div class="about-text">
+        <h3>Hello World! 👋</h3>
+        <p>I'm <strong style="color:var(--neon-cyan)">Tanvi Shelke</strong>, a passionate Data Analyst &amp; Data Science Fresher (2025) from Pune, India. With a foundation in Electronics &amp; Telecommunication Engineering and specialized training in Data Science, I bring a multidisciplinary perspective to every problem I solve.</p>
+        <p>I thrive on transforming raw data into actionable insights. My mission — bridge the gap between complex data and smart business decisions, one model at a time! 🎯</p>
+
+        <!-- P4: Skill chips instead of location bubbles -->
+        <div class="about-skill-chips">
+          <span class="skill-chip chip-cyan">Machine Learning</span>
+          <span class="skill-chip chip-pink">Generative AI</span>
+          <span class="skill-chip chip-purple">SQL &amp; MongoDB</span>
+          <span class="skill-chip chip-green">Power BI</span>
+          <span class="skill-chip chip-yellow">Deep Learning</span>
+          <span class="skill-chip chip-cyan">EDA</span>
+          <span class="skill-chip chip-pink">Web Scraping</span>
+        </div>
+
+        <!-- P4: Action buttons -->
+        <div class="about-btns">
+          <a href="#projects" class="btn-primary" style="font-size:.78rem;padding:12px 28px;">View Work</a>
+          <a href="#skills"   class="btn-outline"  style="font-size:.78rem;padding:11px 28px;">View Skills</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ SOFT SKILLS — P5 ══ -->
+    <div class="soft-skills-section reveal" style="margin-top:70px;">
+      <!-- P5: "// Personality" one line then "Soft Skills" heading -->
+      <div class="ss-tag">// Personality</div>
+      <div class="soft-skills-title">
+        <span class="word-soft">Soft </span><span class="word-skills">Skills</span>
+      </div>
+      <!-- P5: Left to right, all 6 in one row -->
+      <div class="soft-grid-6">
+        <div class="soft-card reveal" style="transition-delay:.04s"><span class="soft-card-icon">🧩</span><h4>Problem Solving</h4></div>
+        <div class="soft-card reveal" style="transition-delay:.08s"><span class="soft-card-icon">🔍</span><h4>Analytical Thinking</h4></div>
+        <div class="soft-card reveal" style="transition-delay:.12s"><span class="soft-card-icon">🤝</span><h4>Team Collaboration</h4></div>
+        <div class="soft-card reveal" style="transition-delay:.16s"><span class="soft-card-icon">💬</span><h4>Communication</h4></div>
+        <div class="soft-card reveal" style="transition-delay:.2s"><span class="soft-card-icon">🚀</span><h4>Self-Motivated</h4></div>
+        <div class="soft-card reveal" style="transition-delay:.24s"><span class="soft-card-icon">📚</span><h4>Continuous Learning</h4></div>
+      </div>
+    </div>
+  </section>
+  <div class="section-sep"></div>
+
+  <!-- ════ 3. SKILLS — P6 linked from about ════ -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <span class="section-tag">// what i know</span>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal" style="transition-delay:.05s"><div class="skill-card-icon">🐍</div><h3>Programming Languages</h3><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">R</span><span class="skill-tag">C++ (Basics)</span><span class="skill-tag">SQL</span></div></div>
+      <div class="skill-card reveal" style="transition-delay:.1s"><div class="skill-card-icon">📊</div><h3>Data Analysis &amp; Viz</h3><div class="skill-tags"><span class="skill-tag">NumPy</span><span class="skill-tag">Pandas</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span><span class="skill-tag">Plotly</span><span class="skill-tag">Statsmodels</span></div></div>
+      <div class="skill-card reveal" style="transition-delay:.15s"><div class="skill-card-icon">🤖</div><h3>Machine Learning</h3><div class="skill-tags"><span class="skill-tag">Scikit-learn</span><span class="skill-tag">SciPy</span><span class="skill-tag">Regression</span><span class="skill-tag">Classification</span><span class="skill-tag">EDA</span></div></div>
+      <div class="skill-card reveal" style="transition-delay:.2s"><div class="skill-card-icon">🧠</div><h3>Deep Learning (Basics)</h3><div class="skill-tags"><span class="skill-tag">TensorFlow</span><span class="skill-tag">Keras</span></div></div>
+      <div class="skill-card reveal" style="transition-delay:.25s"><div class="skill-card-icon">💾</div><h3>Databases</h3><div class="skill-tags"><span class="skill-tag">SQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">MySQL</span><span class="skill-tag">JOIN / GROUP BY</span><span class="skill-tag">Complex Queries</span></div></div>
+      <div class="skill-card reveal" style="transition-delay:.3s"><div class="skill-card-icon">📈</div><h3>BI &amp; Visualization Tools</h3><div class="skill-tags"><span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Jupyter</span><span class="skill-tag">RStudio</span><span class="skill-tag">VS Code</span><span class="skill-tag">Anaconda</span></div></div>
+      <div class="skill-card reveal" style="transition-delay:.35s"><div class="skill-card-icon">📉</div><h3>R Libraries</h3><div class="skill-tags"><span class="skill-tag">dplyr</span><span class="skill-tag">tidyr</span><span class="skill-tag">readr</span><span class="skill-tag">ggplot2</span></div></div>
+      <div class="skill-card reveal" style="transition-delay:.4s"><div class="skill-card-icon">🔍</div><h3>Core Data Skills</h3><div class="skill-tags"><span class="skill-tag">Data Cleaning</span><span class="skill-tag">EDA</span><span class="skill-tag">Data Visualization</span><span class="skill-tag">Statistical Analysis</span><span class="skill-tag">Dashboard Design</span></div></div>
+      <div class="skill-card reveal" style="transition-delay:.45s"><div class="skill-card-icon">🤖</div><h3>AI &amp; Bots</h3><div class="skill-tags"><span class="skill-tag">API Integration</span><span class="skill-tag">Telegram Bot API</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">LLM Basics</span><span class="skill-tag">Generative AI</span></div></div>
+    </div>
+
+    <!-- P7: Proficiency — full width centered -->
+    <div class="proficiency-box reveal">
+      <div class="proficiency-sub-tag">// PROFICIENCY LEVELS</div>
+      <div class="prof-grid">
+        <div class="prof-item"><div class="prof-label-row"><span class="prof-name">Python</span><span class="prof-pct">92%</span></div><div class="prof-track"><div class="prof-fill g1" data-width="92"></div></div></div>
+        <div class="prof-item"><div class="prof-label-row"><span class="prof-name">Power BI / Excel</span><span class="prof-pct">78%</span></div><div class="prof-track"><div class="prof-fill g5" data-width="78"></div></div></div>
+        <div class="prof-item"><div class="prof-label-row"><span class="prof-name">Data Analysis / EDA</span><span class="prof-pct">88%</span></div><div class="prof-track"><div class="prof-fill g2" data-width="88"></div></div></div>
+        <div class="prof-item"><div class="prof-label-row"><span class="prof-name">Generative AI / LLMs</span><span class="prof-pct">72%</span></div><div class="prof-track"><div class="prof-fill g6" data-width="72"></div></div></div>
+        <div class="prof-item"><div class="prof-label-row"><span class="prof-name">Machine Learning</span><span class="prof-pct">82%</span></div><div class="prof-track"><div class="prof-fill g3" data-width="82"></div></div></div>
+        <div class="prof-item"><div class="prof-label-row"><span class="prof-name">Deep Learning (TF/Keras)</span><span class="prof-pct">65%</span></div><div class="prof-track"><div class="prof-fill g7" data-width="65"></div></div></div>
+        <div class="prof-item"><div class="prof-label-row"><span class="prof-name">SQL &amp; Databases</span><span class="prof-pct">80%</span></div><div class="prof-track"><div class="prof-fill g4" data-width="80"></div></div></div>
+        <div class="prof-item"><div class="prof-label-row"><span class="prof-name">R Language</span><span class="prof-pct">60%</span></div><div class="prof-track"><div class="prof-fill g8" data-width="60"></div></div></div>
+      </div>
+    </div>
+
+    <!-- P8: Dev Tools BELOW proficiency, centered -->
+    <div class="dev-tools-section reveal">
+      <div class="dev-tools-sub-tag">// DEVELOPMENT TOOLS</div>
+      <div class="dev-tools-title">
+        <span class="word-tools">Tools I </span><span class="word-use">Use</span>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-card reveal" style="transition-delay:.04s"><span class="tool-icon">📓</span><div class="tool-name">Jupyter</div></div>
+        <div class="tool-card reveal" style="transition-delay:.07s"><span class="tool-icon">🐍</span><div class="tool-name">PyCharm</div></div>
+        <div class="tool-card reveal" style="transition-delay:.1s"><span class="tool-icon">💻</span><div class="tool-name">VS Code</div></div>
+        <div class="tool-card reveal" style="transition-delay:.13s"><span class="tool-icon">🐍</span><div class="tool-name">Anaconda</div></div>
+        <div class="tool-card reveal" style="transition-delay:.16s"><span class="tool-icon">☁️</span><div class="tool-name">Google Colab</div></div>
+        <div class="tool-card reveal" style="transition-delay:.19s"><span class="tool-icon">📊</span><div class="tool-name">Power BI</div></div>
+        <div class="tool-card reveal" style="transition-delay:.22s"><span class="tool-icon">📗</span><div class="tool-name">Excel</div></div>
+        <div class="tool-card reveal" style="transition-delay:.25s"><span class="tool-icon">🗄️</span><div class="tool-name">MySQL</div></div>
+        <div class="tool-card reveal" style="transition-delay:.28s"><span class="tool-icon">🍃</span><div class="tool-name">MongoDB</div></div>
+        <div class="tool-card reveal" style="transition-delay:.31s"><span class="tool-icon">📈</span><div class="tool-name">Streamlit</div></div>
+        <div class="tool-card reveal" style="transition-delay:.34s"><span class="tool-icon">📉</span><div class="tool-name">RStudio</div></div>
+        <div class="tool-card reveal" style="transition-delay:.37s"><span class="tool-icon">🤖</span><div class="tool-name">Telegram API</div></div>
+      </div>
+    </div>
+  </section>
+  <div class="section-sep"></div>
+
+  <!-- ════ 4. PROJECTS — P9 + P10 ════ -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-tag">// what i built</span>
+      <h2 class="section-title">Projects</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div style="margin-bottom:18px" class="reveal">
+      <span style="font-family:'Share Tech Mono',monospace;font-size:.7rem;letter-spacing:3px;color:rgba(4,204,133,.65);text-transform:uppercase;">✅ Completed Projects</span>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card reveal" style="transition-delay:.05s">
+        <div class="project-num">01</div>
+        <span class="project-badge badge-live">✅ Completed</span>
+        <div class="project-emoji">📊</div>
+        <h3>Sales Analytics &amp; Reporting System</h3>
+        <p>Analytics platform using Python and SQL to analyze structured sales data. Built complex queries with JOIN, GROUP BY and HAVING — monthly/yearly analysis, top-product rankings and region-wise revenue reporting with automated charts.</p>
+        <div class="project-tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">SQL</span><span class="tech-tag">Pandas</span><span class="tech-tag">Matplotlib</span><span class="tech-tag">MySQL</span></div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.1s">
+        <div class="project-num">02</div>
+        <span class="project-badge badge-live">✅ Completed</span>
+        <div class="project-emoji">🏨</div>
+        <h3>Python Hotel Management System with MySQL</h3>
+        <p>Menu-driven automation for hotel operations — check-in/out, room booking, upgrades, cancellations and billing. MySQL for persistent room and customer tracking with a clean console UI.</p>
+        <div class="project-tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">MySQL</span><span class="tech-tag">OOP</span><span class="tech-tag">CRUD</span></div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.15s">
+        <div class="project-num">03</div>
+        <span class="project-badge badge-live">✅ Published</span>
+        <div class="project-emoji">🚂</div>
+        <h3>RF Remote Operated Railway Track Cleaning Robot</h3>
+        <p>Automated railway track cleaning system with obstacle detection and waste monitoring using Arduino, ultrasonic &amp; IR sensors, and RF module. Published in IJARSCT Vol. 5, Issue 4, June 2025!</p>
+        <div class="project-tech-stack"><span class="tech-tag">Arduino</span><span class="tech-tag">RF Module</span><span class="tech-tag">Sensors</span><span class="tech-tag">Embedded C</span><span class="tech-tag">IJARSCT ✓</span></div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.2s">
+        <div class="project-num">04</div>
+        <span class="project-badge badge-live">✅ Completed</span>
+        <div class="project-emoji">⚡</div>
+        <h3>Dynamic Wireless Charging of Electric Vehicles in Motion</h3>
+        <p>Wireless EV charging prototype using electromagnetic induction, transmitter–receiver coils and power electronics — enabling vehicles to charge while still moving! A clean energy innovation.</p>
+        <div class="project-tech-stack"><span class="tech-tag">Power Electronics</span><span class="tech-tag">EM Induction</span><span class="tech-tag">Circuit Design</span><span class="tech-tag">EV Tech</span></div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.25s">
+        <div class="project-num">05</div>
+        <span class="project-badge badge-live">✅ Completed</span>
+        <div class="project-emoji">🌐</div>
+        <h3>Personal Portfolio Website — TS.DEV</h3>
+        <p>Fully responsive animated portfolio built with pure HTML, CSS &amp; JavaScript. Features cyberpunk neon aesthetic, scroll-reveal animations, typewriter effect, mobile hamburger menu, custom cursor and canvas particle background.</p>
+        <div class="project-tech-stack"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Canvas API</span><span class="tech-tag">Responsive</span></div>
+      </div>
+
+      <!-- P9: Book Advisor Bot — Project 06 -->
+      <div class="project-card reveal" style="transition-delay:.3s">
+        <div class="project-num">06</div>
+        <span class="project-badge badge-live">✅ Completed</span>
+        <div class="project-emoji">📚</div>
+        <h3>Tanvi's Book Advisor AI Bot — Telegram</h3>
+        <p>An intelligent Telegram bot that suggests books based on user interests — focused on AI, ML, and Python topics. Uses AI-driven recommendations and NLP to understand user queries and provide personalised book suggestions instantly.</p>
+        <div class="project-tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">Telegram Bot API</span><span class="tech-tag">AI / ML</span><span class="tech-tag">NLP</span><span class="tech-tag">Book Advisor</span></div>
+      </div>
+
+    </div>
+
+    <!-- P10: Upcoming — @TanviCinemaBot -->
+    <div style="margin-top:60px;margin-bottom:18px" class="reveal">
+      <span style="font-family:'Share Tech Mono',monospace;font-size:.7rem;letter-spacing:3px;color:rgba(212,160,10,.65);text-transform:uppercase;">🔮 Upcoming Project</span>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal" style="border-color:rgba(212,160,10,.22);">
+        <div class="project-num">07</div>
+        <span class="project-badge badge-upcoming">🔮 In Development</span>
+        <div class="project-emoji">🎬</div>
+        <!-- P10: Bot name changed -->
+        <h3>@TanviCinemaBot — Telegram Movie Recommendation Bot</h3>
+        <p>An intelligent Telegram bot that recommends movies based on user preferences, mood and watch history. Uses ML for smart recommendations and integrates with movie APIs for real-time data. Just chat with the bot — get personalized suggestions!</p>
+        <div style="margin:12px 0 14px;padding:12px 14px;background:rgba(212,160,10,.05);border:1px solid rgba(212,160,10,.14);border-radius:8px;">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:.68rem;color:rgba(212,160,10,.65);letter-spacing:1px;margin-bottom:6px;">PLANNED STACK</div>
+          <div style="font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.75;">🎯 ML-based content &amp; collaborative filtering<br>🔗 TMDB / OMDB API integration<br>🤖 Telegram Bot API (python-telegram-bot)<br>💬 NLP — "suggest me a thriller" style input<br>⭐ User rating &amp; feedback loop</div>
+        </div>
+        <div class="project-tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">ML / Scikit-learn</span><span class="tech-tag">Telegram Bot API</span><span class="tech-tag">TMDB API</span><span class="tech-tag">NLP</span></div>
+      </div>
+    </div>
+  </section>
+  <div class="section-sep"></div>
+
+  <!-- ════ 5. EDUCATION ════ -->
+  <section id="education">
+    <div class="section-header reveal">
+      <span class="section-tag">// my journey</span>
+      <h2 class="section-title">Education</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-year">📅 Jun 2025 – Nov 2025</div>
+          <h3>🎓 Data Science &amp; Data Analytics</h3>
+          <p>Seed Infotech, Pune &nbsp;|&nbsp; 6-Month Specialised Training</p>
+          <div class="timeline-grade">Python • SQL • R • ML • Power BI • EDA</div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot" style="background:var(--neon-pink);box-shadow:0 0 14px rgba(212,0,90,.55)"></div>
+        <div class="timeline-card">
+          <div class="timeline-year">📅 2021 – 2025</div>
+          <h3>🎓 B.E. Electronics &amp; Telecommunication</h3>
+          <p>Sandip Institute of Technology and Research Centre, Nashik</p>
+          <div class="timeline-grade" style="border-color:rgba(212,0,90,.35);color:rgba(212,0,90,.82)">CGPA: 6.95 | First Class</div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot" style="background:var(--neon-purple);box-shadow:0 0 14px rgba(106,40,200,.55)"></div>
+        <div class="timeline-card">
+          <div class="timeline-year">📅 2021</div>
+          <h3>📚 HSC – Higher Secondary Education</h3>
+          <p>A.G.R. Garud Madhyamik Vidyalaya &amp; Jr. College</p>
+          <div class="timeline-grade" style="border-color:rgba(212,160,10,.35);color:rgba(212,160,10,.82)">Percentage: 87.67% ⭐</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:80px">
+      <div class="section-header reveal">
+        <span class="section-tag">// research</span>
+        <h2 class="section-title">Publication</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="pub-card reveal">
+        <span class="pub-badge">📰 IJARSCT &nbsp;|&nbsp; June 2025</span>
+        <h3>"RF Remote Operated Railway Track Cleaning Robot"</h3>
+        <p>International Journal of Advanced Research in Science, Communication and Technology (IJARSCT)<br>
+        <strong style="color:rgba(255,255,255,.78)">Vol. 5, Issue 4, June 2025</strong></p>
+      </div>
+    </div>
+  </section>
+  <div class="section-sep"></div>
+
+  <!-- ════ 6. CERTIFICATIONS ════ -->
+  <section id="certifications">
+    <div class="section-header reveal">
+      <span class="section-tag">// achievements</span>
+      <h2 class="section-title">Certifications</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card reveal" style="transition-delay:.05s"><div class="cert-icon">🏆</div><h3>Oracle Certified Data Science Professional</h3><p>Oracle University • OCI 2025</p></div>
+      <div class="cert-card reveal" style="transition-delay:.1s"><div class="cert-icon">📊</div><h3>Data Science &amp; Data Analytics</h3><p>Seed Infotech, Pune</p></div>
+      <div class="cert-card reveal" style="transition-delay:.15s"><div class="cert-icon">🤖</div><h3>Generative AI Mastermind</h3><p>Outskill • Prompt Engineering, LLMs, AI Apps</p></div>
+      <div class="cert-card reveal" style="transition-delay:.2s"><div class="cert-icon">🐍</div><h3>Python Certification</h3><p>Programming Fundamentals</p></div>
+      <div class="cert-card reveal" style="transition-delay:.25s"><div class="cert-icon">🥇</div><h3>National Level Project Presentation</h3><p>IJARSCT Certificate</p></div>
+      <div class="cert-card reveal" style="transition-delay:.3s"><div class="cert-icon">💻</div><h3>HTML Tutorial for Beginners</h3><p>GyaniPandit</p></div>
+    </div>
+  </section>
+  <div class="section-sep"></div>
+
+  <!-- ════ 7. CONTACT ════ -->
+  <section id="contact" style="padding-bottom:120px">
+    <div class="section-header reveal">
+      <span class="section-tag">// let's connect</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="contact-wrap reveal">
+      <div class="contact-left">
+        <div class="hero-badge" style="margin-bottom:24px;display:inline-block">• Open to Opportunities</div>
+        <h2>Let's build<br><span>something</span><br>amazing together</h2>
+        <p>Actively looking for data science, ML engineering, and AI development roles. Available for freelance projects, full-time positions, and collaborations.</p>
+        <div class="contact-info-cards">
+          <a class="contact-info-card" href="mailto:tanvishelke2112@gmail.com"><div class="contact-icon-box">📧</div><div><div class="contact-info-label">Email</div><div class="contact-info-value">tanvishelke2112@gmail.com</div></div></a>
+          <a class="contact-info-card" href="tel:+918010909229"><div class="contact-icon-box">📱</div><div><div class="contact-info-label">Phone</div><div class="contact-info-value">+91 8010909229</div></div></a>
+          <a class="contact-info-card" href="https://www.linkedin.com/in/tanvi-shelke-9b10793a6" target="_blank" rel="noopener"><div class="contact-icon-box">💼</div><div><div class="contact-info-label">LinkedIn</div><div class="contact-info-value">linkedin.com/in/tanvi-shelke-9b10793a6</div></div></a>
+          <a class="contact-info-card" href="https://github.com/tanvishelke21" target="_blank" rel="noopener"><div class="contact-icon-box">🐱</div><div><div class="contact-info-label">GitHub</div><div class="contact-info-value">github.com/tanvishelke21</div></div></a>
+          <a class="contact-info-card" href="https://t.me/TanviBookAdvisorBot" target="_blank" rel="noopener"><div class="contact-icon-box">📚</div><div><div class="contact-info-label">Book Advisor Bot</div><div class="contact-info-value">@Tanvi's Book Advisor AI Bot</div></div></a>
+          <a class="contact-info-card" href="https://t.me/TanviCinemaBot" target="_blank" rel="noopener"><div class="contact-icon-box">🤖</div><div><div class="contact-info-label">Telegram Bot</div><div class="contact-info-value">@TanviCinemaBot</div></div></a>
+          <div class="contact-info-card"><div class="contact-icon-box">📍</div><div><div class="contact-info-label">Location</div><div class="contact-info-value">Pune, Maharashtra, India</div></div></div>
+        </div>
+      </div>
+      <div class="contact-form-box">
+        <div class="form-section-tag">// SEND A MESSAGE</div>
+        <form id="contactForm" novalidate>
+          <div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" name="name" placeholder="Enter your name" required></div>
+          <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email" name="email" placeholder="your@email.com" required></div>
+          <div class="form-group"><label class="form-label">Subject</label><input class="form-input" type="text" name="subject" placeholder="Job Opportunity / Collaboration"></div>
+          <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" name="message" placeholder="Tell me about your project or opportunity..." required></textarea></div>
+          <button type="submit" class="btn-send">SEND MESSAGE 🚀</button>
+        </form>
+
+        <!-- Quick connect cards to fill space below form -->
+        <div class="quick-connect">
+          <div class="quick-connect-label">// QUICK CONNECT</div>
+          <div class="quick-connect-grid">
+            <a class="qc-card" href="https://github.com/tanvishelke21" target="_blank" rel="noopener">
+              <span class="qc-icon">🐱</span>
+              <span class="qc-name">GitHub</span>
+              <span class="qc-arrow">→</span>
+            </a>
+            <a class="qc-card" href="https://www.linkedin.com/in/tanvi-shelke-9b10793a6" target="_blank" rel="noopener">
+              <span class="qc-icon">💼</span>
+              <span class="qc-name">LinkedIn</span>
+              <span class="qc-arrow">→</span>
+            </a>
+            <a class="qc-card" href="https://t.me/TanviCinemaBot" target="_blank" rel="noopener">
+              <span class="qc-icon">🎬</span>
+              <span class="qc-name">Cinema Bot</span>
+              <span class="qc-arrow">→</span>
+            </a>
+            <a class="qc-card" href="https://t.me/TanviBookAdvisorBot" target="_blank" rel="noopener">
+              <span class="qc-icon">📚</span>
+              <span class="qc-name">Book Advisor Bot</span>
+              <span class="qc-arrow">→</span>
+            </a>
+          </div>
+          <div class="availability-box">
+            <div class="avail-dot"></div>
+            <div>
+              <div class="avail-title">Available for Work</div>
+              <div class="avail-sub">Open to full-time, freelance &amp; internship opportunities</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<nav class="footer-nav">
+  <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+  <a href="#education">Education</a><a href="#certifications">Certs</a><a href="#contact">Contact</a>
+</nav>
+<footer>
+  <p>Built with 💜 by <span>Tanvi Shelke</span> &nbsp;·&nbsp; Pune, India &nbsp;·&nbsp; 2025</p>
+  <p style="margin-top:6px;font-size:.64rem;opacity:.28">Python &middot; Data Science &middot; Machine Learning &middot; AI</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+/* Proficiency bars animate on scroll */
+const profObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    profObs.unobserve(e.target);
+    e.target.querySelectorAll('.prof-fill[data-width]').forEach((b,i)=>{
+      setTimeout(()=>{b.style.width=b.dataset.width+'%';},i*90);
+    });
+  });
+},{threshold:.25});
+document.querySelectorAll('.proficiency-box').forEach(b=>profObs.observe(b));
+</script>
+</body>
+</html>
